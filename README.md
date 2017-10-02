@@ -17,7 +17,7 @@ Kode Tutorial :
 
 untuk menjalankan lagi/ambil link lg cukup pake perintah ini
 
-sh url.sh
+sh url.sh /LineVodka
 
 copas linknya,, lalu klik link,, klik lg log in
 

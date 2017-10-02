@@ -39,7 +39,7 @@ def sendMessage(to, text, contentMetadata={}, contentType=0):
 
 def NOTIFIED_ADD_CONTACT(op):
     try:
-        sendMessage(op.param1, client.getContact(op.param1).displayName + "Ciyee ngelock nih yee")
+        sendMessage(op.param1, client.getContact(op.param1).displayName + " Ciyee ngelock nih yee")
     except Exception as e:
         print e
         print ("\n\nNOTIFIED_ADD_CONTACT\n\n")
@@ -70,7 +70,7 @@ tracer.addOpInterrupt(19,NOTIFIED_KICKOUT_FROM_GROUP)
 
 def NOTIFIED_LEAVE_GROUP(op):
     try:
-        sendMessage(op.param1, client.getContact(op.param2).displayName + " idih baper leave")
+        sendMessage(op.param1, client.getContact(op.param2).displayName + " idih baper langsung leave")
     except Exception as e:
         print e
         print ("\n\nNOTIFIED_LEAVE_GROUP\n\n")
@@ -175,7 +175,7 @@ def SEND_MESSAGE(op):
                     key = msg.text[5:]
                     client.kickoutFromGroup(msg.to, [key])
                     contact = client.getContact(key)
-                    sendMessage(msg.to, ""+contact.displayName+"lama")
+                    sendMessage(msg.to, ""+contact.displayName+" semoga tenang di alam sana kawan")
                 if "kick:" in msg.text:
                     key = msg.text[3:]
                     group = client.getGroup(msg.to)
@@ -188,7 +188,7 @@ def SEND_MESSAGE(op):
                         contact = client.getContact(Mids[kazu])
                         sendMessage(msg.to, ""+contact.displayName+" Fuck")
                     else:
-                        sendMessage(msg.to, "wtf?")
+                        sendMessage(msg.to, "This Is ♠Me")
                 if msg.text == "cancel":
                     group = client.getGroup(msg.to)
                     if group.invitee is None:
@@ -215,11 +215,11 @@ def SEND_MESSAGE(op):
                     contact = client.getContact(key)
                     sendMessage(msg.to, ""+contact.displayName+"'s contact")
                 if msg.text == "time":
-                    sendMessage(msg.to, "hari ini " + datetime.datetime.today().strftime('%d - %m - %Y %H:%M:%S') + " WIB")
+                    sendMessage(msg.to, "hari ini " + datetime.datetime.today().strftime('%d-%m-%Y %H:%M:%S') + " WIB")
                 if msg.text == "gift":
                     sendMessage(msg.to, text="gift sent", contentMetadata=None, contentType=9)
                 if msg.text == "set":
-                    sendMessage(msg.to, "wait, gw cek yang sider")
+                    sendMessage(msg.to, "Wait, gw cek yang sider")
                     try:
                         del wait['readPoint'][msg.to]
                         del wait['readMember'][msg.to]
@@ -240,7 +240,7 @@ def SEND_MESSAGE(op):
                                 print rom
                                 chiya += rom[1] + "\n"
 
-                        sendMessage(msg.to, "Noh yang sider asu %s\n\nList jones seumur hidup\n%sItu bot chat\n\nWaktu:\n[%s]"  % (wait['readMember'][msg.to],chiya,setTime[msg.to]))
+                        sendMessage(msg.to, "Noh yang sider asu %s\n\nList jones seumur hidup\n%s[This is Me]\n\nWaktu:\n[%s]"  % (wait['readMember'][msg.to],chiya,setTime[msg.to]))
                     else:
                         sendMessage(msg.to, "gak usah lebay uwes, gae dolanan ae masane")
                 else:
