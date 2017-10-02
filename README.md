@@ -1,30 +1,36 @@
-# LineVodka
-_May the Vodka be with you..._
+Line♠Mē
 
-Tutorial
-------
-Recomended for python 2.7
+Tutorial selft bot Line♠Mē
 
-Using git :
+Kode Tutorial :
+1. pkg install python2
+2. Y
+3. pkg install git
+4. Y
+5. git clone https://github.com/Azwieen/LineVodka
+6. pip2 install thrift==0.9.3
+7. pkg install rsa
+8. pip2 install requests
+9. pip2 install rsa
+10. ls
+11. cd LineVodka
+12. ls
+13. python2 me.py
 
-    $ git clone http://github.com/merkremont/LineVodka
+untuk menjalankan lagi/ambil link lg cukup pake perintah ini
 
-Python packages :
+sh url.sh
 
-    $ pip install thrift==0.9.3
-    $ pip install rsa
-    $ pip install requests
+copas linknya,, lalu klik link,, klik lg log in
 
-Run Vodka :
-
-    $ python vodkabot.py
-
-Video Tutorial
-------
-
-[![Tutorial Build BOT LINE Unofficial Protector and Kicker Group](http://i.imgur.com/C8xYq7v.png "Tutorial Build BOT LINE Unofficial Protector and Kicker Group")](https://youtu.be/anoF3jnWl2A)
-
-Author
-------
-
-Merk Kremont / [@merkremont](https://twitter.com/merkremont)
+keyword : Untuk menggunakannya, anda harus mengetik perintah set terlebih dahulu di semua grup yang ingin anda gunakan selfbot, setelah anda mengetikan perintah set, barulah command atau perintah yang lain bisa dijalankan. Berikut command command atau perintah selfbot beserta keterangannya
+1. set [untuk mengatur atau men-set read point di sebuah grup]
+2. cek sider [untuk melihat siders]
+3. me [untuk mengirimkan contact diri sendiri / pemasang selfbot tersebut]
+4. mid [untuk melihat id diri sendiri / pemasang selfbot tersebut]
+5. ginfo [untuk melihat info sebuah grup
+6. gid [untuk melihat id grup]
+7. time [untuk melihat waktu]
+8. open [untuk membuka link qr code di sebuah grup] 9. close [untuk menutup link qr code di sebuah grup]
+10. url [untuk mengetahui url sebuah grup]
+11. kick: [untuk mengeluarkan anggota grup dengan syarat hanya 1 anggota, tergantung kita memasukan nama target tersebut] Perintah atau command command di atas tidak bisa dilakukan jika anda belum mengetik set di grup yang ingin anda pasang selfbot diri anda sendiri.
