@@ -3,19 +3,17 @@ Line♠Mē
 Tutorial selft bot Line♠Mē
 
 Kode Tutorial :
-1. pkg install python2
-2. Y
-3. pkg install git
-4. Y
-5. git clone https://github.com/Azwieen/LineVodka
-6. pip2 install thrift==0.9.3
-7. pkg install rsa
-8. pip2 install requests
-9. pip2 install rsa
+1. pkg install python2 -y;
+2. pkg install git -y;
+3. git clone https://github.com/Azwieen/LineVodka
+4. pip2 install thrift==0.9.3
+5. pkg install rsa
+6. pip2 install requests
+7. pip2 install rsa
+8. ls
+9. cd LineVodka
 10. ls
-11. cd LineVodka
-12. ls
-13. python2 me.py
+11. python2 me.py
 
 untuk menjalankan lagi/ambil link lg cukup pake perintah ini
 
