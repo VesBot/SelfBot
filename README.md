@@ -19,6 +19,11 @@ untuk menjalankan lagi/ambil link lg cukup pake perintah ini
 
 sh url.sh /LineVodka
 
+atau
+
+cd LineVodka
+python2 me.py
+
 copas linknya,, lalu klik link,, klik lg log in
 
 keyword : Untuk menggunakannya, anda harus mengetik perintah set terlebih dahulu di semua grup yang ingin anda gunakan selfbot, setelah anda mengetikan perintah set, barulah command atau perintah yang lain bisa dijalankan. Berikut command command atau perintah selfbot beserta keterangannya
