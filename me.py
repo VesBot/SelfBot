@@ -202,7 +202,7 @@ def SEND_MESSAGE(op):
                     client.findAndAddContactsByMid(key)
                     client.inviteIntoGroup(msg.to, [key])
                     contact = client.getContact(key)
-                    sendMessage(msg.to, ""+contact.displayName+" kam bro")
+                    sendMessage(msg.to, ""+contact.displayName+" itu temenku ijin inpit")
                 if msg.text == "me":
                     M = Message()
                     M.to = msg.to
@@ -240,7 +240,7 @@ def SEND_MESSAGE(op):
                                 print rom
                                 chiya += rom[1] + "\n"
 
-                        sendMessage(msg.to, "Noh yang sider asu %s\n\nList jones seumur hidup\n%s[This is Me]\n\nWaktu:\n[%s]"  % (wait['readMember'][msg.to],chiya,setTime[msg.to]))
+                        sendMessage(msg.to, "Noh yang sider hajar dah %s\n\nList jones seumur hidup\n%sMoga bintitan tuh mata\n\nWaktu & Tanggal:\n[%s]"  % (wait['readMember'][msg.to],chiya,setTime[msg.to]))
                     else:
                         sendMessage(msg.to, "gak usah lebay uwes, gae dolanan ae masane")
                 else:
