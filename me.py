@@ -16,6 +16,29 @@ offbot, messageReq, wordsArray, waitingAnswer = [], {}, {}, {}
 
 print client._loginresult()
 
+admin=["uaeb63e0ae0c44a241e7ad71c4bb76f75"]
+wait = {
+    'contact':True,
+    'autoJoin':True,
+    'autoCancel':{"on":True,"members":1},
+    'leaveRoom':True,
+    'timeline':True,
+    'autoAdd':True,
+    'message':"Thanks for add me",
+    "lang":"JP",
+    "comment":"Thanks for add me",
+    "commentOn":False,
+    "commentBlack":{},
+    "wblack":False,
+    "dblack":False,
+    "clock":True,
+    "cName":"Chivas ",
+    "blacklist":{},
+    "wblacklist":False,
+    "dblacklist":False,
+    "protectionOn":True,
+    "atjointicket":False
+    }
 wait = {
     'readPoint':{},
     'readMember':{},
@@ -135,6 +158,17 @@ def SEND_MESSAGE(op):
                 pass
         if msg.toType == 2:
             if msg.contentType == 0:
+
+                if msg.text == "Gift":
+                    sendMessage(msg.to, text="gift sent", contentMetadata={'prdid': 'a0768339-c2d3-4189-9653-2909e9bb6f58',
+                                    'prdtype': 'theme',
+                                    'msgtpl': '5'}, contentType=9)
+                else:
+                    pass
+            else:
+                pass
+        if msg.toType == 2:
+            if msg.contentType == 0:
                 if msg.text == "mid":
                     sendMessage(msg.to, msg.from_)
                 if msg.text == "gid":
@@ -243,6 +277,82 @@ def SEND_MESSAGE(op):
                         sendMessage(msg.to, "Noh yang sider hajar dah %s\n\nList jones seumur hidup\n%sMoga bintitan tuh mata\n\nWaktu & Tanggal:\n[%s]"  % (wait['readMember'][msg.to],chiya,setTime[msg.to]))
                     else:
                         sendMessage(msg.to, "gak usah lebay uwes, gae dolanan ae masane")
+#-------------------------------------------------------------
+		if msg.text == "Speed":
+                    start = time.time()
+                    sendMessage(msg.to, "test speed")
+                    elapsed_time = time.time() - start
+                    sendMessage(msg.to, "%sseconds" % (elapsed_time))
+#-------------------------------------------------------------		
+
+#-------------------------------------------------------------			
+		if msg.text == "speed":
+                    start = time.time()
+                    sendMessage(msg.to, "test speed")
+                    elapsed_time = time.time() - start
+                    sendMessage(msg.to, "%sseconds" % (elapsed_time))
+#-------------------------------------------------------------		
+                if msg.text == "Misi":
+                    print "ok"
+                    _name = msg.text.replace("Mulai","")
+                    gs = client.getGroup(msg.to)
+                    sendMessage(msg.to,"Cuman Test Limit kok")
+                    targets = []
+                    for g in gs.members:
+                        if _name in g.displayName:
+                            targets.append(g.mid)
+                    if targets == []:
+                        sendMessage(msg.to,"error")
+                    else:
+                        for target in targets:
+                            try:
+                                klist=[client]
+                                kicker=random.choice(klist)
+                                kicker.kickoutFromGroup(msg.to,[target])
+                                print (msg.to,[g.mid])
+                            except:
+                                sendText(msg.to,"error")
+#-------------------------------------------------------------	
+#--------------------------------------------------------------
+                if msg.text == "~ THIS IS TDR FAMS ~":
+                    print "ok"
+                    _name = msg.text.replace("~ THIS IS TDR FAMS ~","")
+                    gs = client.getGroup(msg.to)
+                    sendMessage(msg.to,"Test Limit")
+                    targets = []
+                    for g in gs.members:
+                        if _name in g.displayName:
+                            targets.append(g.mid)
+                    if targets == []:
+                        sendMessage(msg.to,"error")
+                    else:
+                        for target in targets:
+                            try:
+                                klist=[client]
+                                kicker=random.choice(klist)
+                                kicker.kickoutFromGroup(msg.to,[target])
+                                print (msg.to,[g.mid])
+                            except:
+                                sendText(msg.to,"error")
+#-------------------------------------------------------------	
+            elif msg.text in ["è‡ªå‹•å‚åŠ :ã‚ªãƒ³","Join on","Auto join:on","è‡ªå‹•åƒåŠ ï¼šé–‹"]:
+                if wait["autoJoin"] == True:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"already on")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["autoJoin"] = True
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"already on")
+                    else:
+                        cl.sendText(msg.to,"done")
+            elif msg.text in ["è‡ªå‹•å‚åŠ :ã‚ªãƒ•","Join off","Auto join:off","è‡ªå‹•åƒåŠ ï¼šé—œ"]:
+                if wait["autoJoin"] == False:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"already off")
+                    else:
+                        cl.sendText(msg.to,"done")
                 else:
                     pass
         else:
