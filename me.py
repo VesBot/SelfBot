@@ -10,6 +10,7 @@ sys.setdefaultencoding('utf-8')
 
 client = LineClient()
 client._qrLogin("line://au/q/")
+client = line("rayhsav@gmail.com","ray12345")
 
 profile, setting, tracer = client.getProfile(), client.getSettings(), LineTracer(client)
 offbot, messageReq, wordsArray, waitingAnswer = [], {}, {}, {}
